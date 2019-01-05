@@ -3,3 +3,7 @@ node_modules
 
 # lol macs
 .DS_Store/
+
+yarn.lock
+package-lock.json
+build/
