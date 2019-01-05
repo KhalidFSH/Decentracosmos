@@ -1,0 +1,21 @@
+{
+  "name": "decentracosmos",
+  "version": "0.0.1",
+  "description": "A blockchain-based virtual univarse",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "keywords": [
+    "DAPP",
+    "blockchain",
+    "decentracosmos",
+    "solidity",
+    "etherume"
+  ],
+  "author": "Khalid F.SH <dev.khalid@me.com>",
+  "license": "MIT"
+}
