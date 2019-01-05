@@ -14,7 +14,10 @@
     "blockchain",
     "decentracosmos",
     "solidity",
-    "etherume"
+    "ethereum",
+    "smart",
+    "contracts",
+    "ERC721"
   ],
   "author": "Khalid F.SH <dev.khalid@me.com>",
   "license": "MIT",
