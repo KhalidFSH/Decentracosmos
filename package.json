@@ -17,5 +17,8 @@
     "etherume"
   ],
   "author": "Khalid F.SH <dev.khalid@me.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "openzeppelin-solidity": "2.1.1"
+  }
 }
