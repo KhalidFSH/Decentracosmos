@@ -9,7 +9,7 @@ import 'openzeppelin-solidity/contracts/token/ERC721/ERC721Enumerable.sol';
 contract Salable is ERC721Enumerable {
 
     mapping(uint256 => uint256) public tokenForSalePrice;
-    mapping(uint256 => address payable) private _ownerOfSallingToken;
+    mapping(uint256 => address) private _ownerOfSallingToken;
     mapping(uint256 => uint256) private _tokenForSaleIndex;
     uint256[] public tokenForSale;
 
@@ -44,7 +44,7 @@ contract Salable is ERC721Enumerable {
 
     function _bayTokenFromSale(uint256 _tokenId, uint256 payed) internal mostBeForSale(_tokenId) {
         uint256 tokenPrice = tokenForSalePrice[_tokenId];
-        address payable tokenOwner = _ownerOfSallingToken[_tokenId];
+        address payable tokenOwner = _makePayableAddrss(_ownerOfSallingToken[_tokenId]);
 
         require(payed >= tokenPrice);
 
@@ -76,5 +76,9 @@ contract Salable is ERC721Enumerable {
         tokenForSale.length--;
         _tokenForSaleIndex[_tokenId] = 0;
         _tokenForSaleIndex[lastToken] = tokenIndex;
+    }
+    
+    function _makePayableAddrss(address x) internal pure returns (address payable) {
+      return address(uint160(x));
     }
 }
