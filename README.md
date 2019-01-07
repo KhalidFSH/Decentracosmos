@@ -5,15 +5,14 @@
 Imaginary cosmos, whiche can produce endless of gallaxies contain a randome genrated number of stars in randome system as ERC721 Non-Fungible Tokens, can be traded between users, also who knows maybe some day will change the sky to an augmented one and you can blow up yours in beautiful day.
  
 Smart contracts built in Solidity v0.5.0 with the power of inhertens, and deployed using Truffle in Ethereum Rinkiby  testnet.
-Dapp (wep frontend) built using React and web3 to connect to the blockchain network.
+Dapp (web frontend) built using React and web3 to connect to the blockchain network.
 [Live Demo(running in Rinkeby testnet)](https://decentracosmos-jxazhqilpk.now.sh/) 
 
-## For Reviewer
+## ERC-721 Token Info
 ----
-  - ERC-721 Token Name: `Decentracosmos`
-  - ERC-721 Token Symbol: `MOS`
+  - Name: `Decentracosmos`
+  - Symbol: `MOS`
   - Contract Address: `0xc105551255aD2a1538C49C124AABc9bA60Bc48e8`
-  - First Token Transaction TxHash: `0x8c2e91b8f3e1a4c8d3916d0b91934df5ada3dc92d7e3869db7a79ae868286f8a`
 
 ## Prerequisites
 ----
