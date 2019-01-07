@@ -21,8 +21,10 @@
 // const HDWalletProvider = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
-// const fs = require('fs');
+const path = require("path");
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
+var HDWalletProvider = require("truffle-hdwallet-provider");
+var mnemonic = ""
 
 module.exports = {
   /**
@@ -34,6 +36,7 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
+  contracts_build_directory: path.join(__dirname, "/dapp/src/contracts"),
 
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
@@ -42,10 +45,16 @@ module.exports = {
     // tab if you use this network and you must also set the `host`, `port` and `network_id`
     // options below to some value.
     //
+
+    
+
+
     development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 8545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 9545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      gas: 5000000,
+      gasPrice: 1000000000,
     },
 
     // Another network with more advanced options...
@@ -67,7 +76,14 @@ module.exports = {
       // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    // }, 0x65F97478AEB4b634Cc2F8399a6c9d6Ec5eCDB866
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/"),
+      //host: "127.0.0.1",
+      //port: 8545,
+      network_id: 4,
+      gas: 7000000,
+    }
 
     // Useful for private networks
     // private: {

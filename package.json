@@ -1,6 +1,6 @@
 {
   "name": "decentracosmos",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A blockchain-based virtual univarse",
   "main": "truffle-config.js",
   "directories": {
@@ -24,6 +24,7 @@
   "dependencies": {
     "ganache-cli": "^6.2.5",
     "global": "^4.3.2",
-    "openzeppelin-solidity": "2.1.1"
+    "openzeppelin-solidity": "2.1.1",
+    "truffle-hdwallet-provider": "^1.0.2"
   }
 }

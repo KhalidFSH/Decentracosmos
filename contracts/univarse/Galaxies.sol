@@ -1,10 +1,8 @@
 pragma solidity ^0.5.0;
 
-import 'openzeppelin-solidity/contracts/math/SafeMath.sol';
 import './Stars.sol';
 
 contract Galaxies is Stars{
-    using SafeMath for uint256;
 
     enum GalaxyClass {notYet, E, S, L}
  

@@ -1,5 +1,5 @@
 pragma solidity ^0.5.0;
-//pragma experimental ABIEncoderV2;
+pragma experimental ABIEncoderV2;
 
 import 'openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
 import './erc721_superpower/Salable.sol';
@@ -12,7 +12,7 @@ import './univarse/Cosmos.sol';
  * @dev For:Reviewer: If you have no time don't review all files, 
  * I just did some extra work, I couldn't stop my ego OO.
  */
-contract StarNotary is ERC721Full('Decentracosmos', 'MOS'), Salable, Exchangable, Cosmos {
+contract StarNotary is ERC721Full, Salable, Exchangable, Cosmos {
 
     /// Mapping from token Id to a Star.
     mapping(uint256 => Star) public tokenIdToStarInfo;
@@ -33,6 +33,8 @@ contract StarNotary is ERC721Full('Decentracosmos', 'MOS'), Salable, Exchangable
         require(ownerOf(_tokenId) == msg.sender);
         _;
     }
+
+    constructor (string memory _name, string memory _symble) public ERC721Full(_name, _symble) { }
     
 
     /**
@@ -57,6 +59,12 @@ contract StarNotary is ERC721Full('Decentracosmos', 'MOS'), Salable, Exchangable
         return tokenIdToStarInfo[_tokenId].name;
     }
 
+    function lookUptokenIdToStarNameTypeLevel(uint _tokenId) external view returns(string memory _name, uint _type, uint _level) {
+        _name = tokenIdToStarInfo[_tokenId].name;
+        _type = uint(tokenIdToStarInfo[_tokenId].class);
+        _level = tokenIdToStarInfo[_tokenId].level;
+    }
+
     /**
     * @dev look up a Star's info by its token Td.
     * @param _tokenId Star token Id to look up into it.
@@ -64,9 +72,9 @@ contract StarNotary is ERC721Full('Decentracosmos', 'MOS'), Salable, Exchangable
     * @notice this function will work only when importing ABIEncoderV2 
     * whiches currently in experimental mode.
     */
-    // function lookUptokenIdToStarInfo(uint _tokenId) external view returns(Star memory) {
-    //     return tokenIdToStarInfo[_tokenId];
-    // }
+    function lookUptokenIdToStarInfo(uint _tokenId) external view returns(Star memory) {
+        return tokenIdToStarInfo[_tokenId];
+    }
 
     /**
     * @dev Public function to put up a Star for sale.

@@ -1,12 +1,11 @@
 # Dependency directory
-node_modules
+/node_modules
 
 # lol macs
-.DS_Store/
+.DS_Store
 
 yarn.lock
 package-lock.json
-build/
 
 # clinet interface 
-dapp/
+/dapp
