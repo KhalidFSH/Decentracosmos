@@ -48,7 +48,7 @@ contract Salable is ERC721Enumerable {
 
         require(payed >= tokenPrice);
 
-        _transferFrom(tokenOwner, msg.sender, _tokenId);
+        _transferFrom(_ownerOfSallingToken[_tokenId], msg.sender, _tokenId);
 
         tokenOwner.transfer(tokenPrice);
         if(payed > tokenPrice) {
