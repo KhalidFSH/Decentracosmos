@@ -1,3 +1,5 @@
+[![Udacity - Blockchain Developer Nanodegree](https://bit.ly/2svzNOI)](https://www.udacity.com/blockchain)
+
 # Decentracosmos
 
 [![solid](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/155/milky-way_1f30c.png)](https://decentracosmos-jxazhqilpk.now.sh/)
@@ -9,13 +11,12 @@ Dapp (web frontend) built using React and web3 to connect to the blockchain netw
 [Live Demo(running in Rinkeby testnet)](https://decentracosmos-jxazhqilpk.now.sh/) 
 
 ## ERC-721 Token Info
-----
   - Name: `Decentracosmos`
   - Symbol: `MOS`
   - Contract Address: `0xc105551255aD2a1538C49C124AABc9bA60Bc48e8`
 
 ## Prerequisites
-----
+
 ### Requires NPM
 Homebrew on Mac OSX:
 ```sh
@@ -31,7 +32,6 @@ $ npm install truffle -g
 ```
 
 ## Installation
-----
 ### Install the local NPM packages:
 ```sh
 $ npm install
@@ -43,7 +43,6 @@ $ npm install
 ```
 
 ## Run
----
 ### Enter and run Truffle develope console (local blockchain)
 ```sh
 $ truffle develop
@@ -67,9 +66,50 @@ $ cd dapp
 $ npm run start
 ```
 
-## Built with ❤️ using:
-----
+## Directory Tree
+```
+> .
+├── LICENSE.md
+├── README.md
+├── contracts
+│   ├── StarNotary.sol
+│   ├── erc721_superpower
+│   │   ├── Exchangable.sol
+│   │   └── Salable.sol
+│   ├── univarse
+│   │   ├── Cosmos.sol
+│   │   ├── Galaxies.sol
+│   │   └── Stars.sol
+│   └── utils
+│       └── Migrations.sol
+├── dapp
+│   ├── README.md
+│   ├── package.json
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   └── manifest.json
+│   └── src
+│       ├── App.css
+│       ├── App.js
+│       ├── App.test.js
+│       ├── index.css
+│       ├── index.js
+│       ├── serviceWorker.js
+│       └── utils
+│           └── getWeb3.js
+├── migrations
+│   ├── 1_initial_migration.js
+│   └── 2_deploy_contracts.js
+├── package.json
+├── test
+│   └── star-notary.js
+└── truffle-config.js
 
+10 directories, 26 files
+```
+
+## Built with ❤️ using:
 * [**Solidity**](https://solidity.readthedocs.io/en/v0.5.0/) -  An object-oriented, high-level language for implementing smart contracts. 
 * [**OpenZeppelin**](https://openzeppelin.org/) -  A library for secure smart contract development. It provides implementations of standards like ERC20 and ERC721.
 * [**Truffle**](https://truffleframework.com/) -  A world class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM).
@@ -78,12 +118,11 @@ $ npm run start
 
 
 ## Author
-----
+
 
 * **Khalid F.SH**  - [Email](dev.khalid@me.com)
 
 
 ## License
------
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
