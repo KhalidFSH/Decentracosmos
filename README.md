@@ -4,7 +4,7 @@
 
 [![solid](https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/155/milky-way_1f30c.png)](https://decentracosmos-jxazhqilpk.now.sh/)
 
-Imaginary cosmos, whiche can produce endless of gallaxies contain a randome genrated number of stars in randome system as ERC721 Non-Fungible Tokens, can be traded between users, also who knows maybe some day will change the sky to an augmented one and you can blow up yours in beautiful day.
+Imaginary cosmos, which can produce endless of gallaxies contain a randome genrated number of stars in a randome system as ERC721 Non-Fungible Tokens, can be traded between users, also who knows maybe some day will change the sky to an augmented one and you can blow up yours in a beautiful day.
  
 Smart contracts built in Solidity v0.5.0 with the power of inhertens, and deployed using Truffle in Ethereum Rinkiby  testnet.
 Dapp (web frontend) built using React and web3 to connect to the blockchain network.
