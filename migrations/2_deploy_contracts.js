@@ -1,5 +1,5 @@
 var StarNotary = artifacts.require("./StarNotary.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(StarNotary, "Decentracosmos", "MOS");
+  deployer.deploy(StarNotary, "ERC-TOKEN-NAME", "ERC-SYMBLE");
 };
